@@ -1,5 +1,5 @@
 /* =========================
-   RESET BÁSICO
+   RESET
 ========================= */
 * {
   margin: 0;
@@ -7,42 +7,39 @@
   box-sizing: border-box;
 }
 
+/* =========================
+   BODY / FONDO GENERAL
+========================= */
 body {
   font-family: "Inter", sans-serif;
   color: #2a1a1f;
-  background:
-    linear-gradient(rgba(0,0,0,0.15), rgba(0,0,0,0.15)),
-    url("https://perledecoton.com/cdn/shop/articles/couleur_terracotta_5470aff5-f23e-4899-8de7-0600567824b8.jpg?v=1758023179&width=1920");
+  background: url("https://perledecoton.com/cdn/shop/articles/couleur_terracotta_5470aff5-f23e-4899-8de7-0600567824b8.jpg?v=1758023179&width=1920");
   background-size: cover;
   background-attachment: fixed;
 }
 
 /* =========================
-   HEADER / HERO
+   HEADER
 ========================= */
 .header {
   max-width: 1200px;
   margin: 40px auto;
-  padding: 40px 20px;
-  border-radius: 24px;
+  padding: 36px 20px;
   text-align: center;
+  border-radius: 24px;
 
-  background:
-    linear-gradient(
-      rgba(245,236,220,0.92),
-      rgba(245,236,220,0.92)
-    );
+  background: rgba(245, 236, 220, 0.92);
 }
 
 .header img {
-  max-width: 140px;   /* LOGO CONTROLADO */
-  margin-bottom: 16px;
-  filter: drop-shadow(0 6px 12px rgba(0,0,0,0.25));
+  max-width: 120px; /* LOGO CONTROLADO */
+  margin-bottom: 14px;
+  filter: drop-shadow(0 6px 12px rgba(0,0,0,.25));
 }
 
 .header h1 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 28px;
+  font-size: 26px;
   color: #2e4b2f;
   margin-bottom: 14px;
 }
@@ -50,12 +47,12 @@ body {
 .header .badges {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 .badge {
-  background: rgba(46,75,47,0.12);
+  background: rgba(46,75,47,.12);
   color: #2e4b2f;
   padding: 8px 14px;
   border-radius: 999px;
@@ -63,7 +60,7 @@ body {
 }
 
 /* =========================
-   CONTENEDOR GENERAL
+   CONTENEDOR PRINCIPAL
 ========================= */
 .container {
   max-width: 1200px;
@@ -72,7 +69,7 @@ body {
 }
 
 /* =========================
-   GRID DE PRODUCTOS (CLAVE)
+   CATALOGO — GRILLA REAL
 ========================= */
 .products {
   display: grid;
@@ -81,21 +78,27 @@ body {
 }
 
 /* =========================
-   CARD DE PRODUCTO
+   CARD PRODUCTO
 ========================= */
 .card {
   background: #f7f2ec;
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  display: flex;
-  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0,0,0,.15);
+
+  /* IMPORTANTE:
+     NO FLEX COLUMN ACÁ
+     para evitar comportamiento tipo banda */
 }
 
+/* =========================
+   IMAGEN PRODUCTO
+========================= */
 .card img {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  display: block;
 }
 
 /* =========================
@@ -103,31 +106,27 @@ body {
 ========================= */
 .card-content {
   padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
-/* TÍTULO — ACÁ ESTABA EL PROBLEMA */
 .card h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 20px;
   font-weight: 600;
   color: #1f2f22;
-  line-height: 1.2;
+  margin-bottom: 8px;
 }
 
 .card p {
   font-size: 14px;
   color: #4a3a33;
   line-height: 1.4;
+  margin-bottom: 12px;
 }
 
 /* =========================
-   PRECIO + BOTÓN
+   FOOTER CARD
 ========================= */
 .card-footer {
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -155,7 +154,7 @@ body {
 }
 
 /* =========================
-   FOOTER
+   FOOTER GENERAL
 ========================= */
 .footer {
   text-align: center;
@@ -163,36 +162,3 @@ body {
   font-size: 14px;
   color: #f3ede6;
 }
-/* =========================
-   FORZAR CATÁLOGO EN GRILLA
-   (ANULA BANDAS)
-========================= */
-
-.products {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
-  gap: 24px !important;
-  align-items: stretch;
-}
-
-.products > * {
-  display: block !important;
-  width: 100% !important;
-}
-/* FORZAR GRILLA (si tu contenedor es .products o .grid) */
-.products,
-.grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
-  gap: 24px !important;
-  align-items: stretch !important;
-}
-
-/* evita que cada item se estire raro como banda */
-.products > *,
-.grid > * {
-  width: auto !important;
-  max-width: 100% !important;
-}
-
-
