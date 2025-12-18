@@ -249,4 +249,13 @@ a{ color: inherit; }
 .badges.centered{
   justify-content: center;
 }
+/* FIX DEFINITIVO: tamaño del logo */
+.logo-centered{
+  width: 90px !important;
+  max-width: 90px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto 6px !important;
+  filter: drop-shadow(0 8px 18px rgba(0,0,0,.25)) !important;
+}
 
