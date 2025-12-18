@@ -258,4 +258,30 @@ a{ color: inherit; }
   margin: 0 auto 6px !important;
   filter: drop-shadow(0 8px 18px rgba(0,0,0,.25)) !important;
 }
+/* --- FIX: títulos de productos (visibles y elegantes) --- */
+.card h3{
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  line-height: 1.15;
+  margin: 0 0 8px;
+  font-weight: 600;
+  color: #1c141a;              /* oscuro real */
+  text-decoration: none !important;
+}
+
+/* si por alguna razón el título quedó dentro de un <a> */
+.card h3 a{
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+/* textos del card un toque más legibles */
+.card p{
+  color: rgba(28,20,26,.82);
+}
+
+/* por si algún estilo global está pintando links en azul */
+.card a{
+  color: inherit;
+}
 
