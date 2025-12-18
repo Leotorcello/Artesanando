@@ -179,4 +179,20 @@ body {
   display: block !important;
   width: 100% !important;
 }
+/* FORZAR GRILLA (si tu contenedor es .products o .grid) */
+.products,
+.grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 24px !important;
+  align-items: stretch !important;
+}
+
+/* evita que cada item se estire raro como banda */
+.products > *,
+.grid > * {
+  width: auto !important;
+  max-width: 100% !important;
+}
+
 
