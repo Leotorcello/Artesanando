@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Artesanando – Artesanias rituales | Yuri Sumak</title>
-  <meta name="description" content="Artesanando: carracas chamanicas, plumeros para defumacion, velas arcanas (22 arcanos mayores), aguayos rituales y agua florida. Envíos a todo el país por Correo Argentino. Pedidos por WhatsApp." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta property="og:title" content="Artesanando – Artesanias rituales" />
-  <meta property="og:description" content="Objetos ceremoniales hechos a mano por Yuri Sumak. Pedidos por WhatsApp." />
-  <meta property="og:image" content="assets/og-cover.jpg" />
-  <meta property="og:type" content="website" />
+  <title>Artesanando – Artesanías rituales | Yuri Sumak</title>
+  <meta name="description" content="Artesanías rituales hechas a mano: carracas chamánicas, plumeros de defumación, velas arcanas, aguayos y agua florida. Envíos a todo el país.">
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Artesanando – Artesanías rituales">
+  <meta property="og:description" content="Creado y consagrado por Yuri Sumak">
+  <meta property="og:image" content="assets/og-cover.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <div class="container">
 
-<header class="header">
-  <div class="brand-centered">
-    <img class="logo-centered" src="assets/logo.png" alt="Artesanando - Yuri Sumak">
+    <!-- HEADER -->
+    <header class="header">
 
-    <p class="tagline">
-      Artesanías rituales hechas a mano
-    </p>
+      <!-- LOGO: controlado acá, sin magia -->
+      <img
+        src="assets/logo.png"
+        alt="Artesanando - Yuri Sumak"
+        style="
+          width:90px;
+          height:auto;
+          display:block;
+          margin:0 auto 10px;
+        "
+      >
 
-    <div class="badges centered">
-<span class="badge">Creado y consagrado por <strong>Yuri Sumak</strong></span>
-      <span class="badge">Pedidos por WhatsApp</span>
-      <span class="badge">Envíos a todo el país</span>
-    </div>
-  </div>
-</header>
+      <p class="tagline">Artesanías rituales hechas a mano</p>
 
+      <div class="badges centered">
+        <span class="badge">Creado y consagrado por <strong>Yuri Sumak</strong></span>
+        <span class="badge">Pedidos por WhatsApp</span>
+        <span class="badge">Envíos a todo el país</span>
+      </div>
+
+    </header>
+
+    <!-- INTRO -->
     <section class="section">
-      <h2>Catalogo</h2>
-      <p>Elegí un producto y pedilo por WhatsApp. Te responde con disponibilidad, variantes y costo de envío.</p>
+      <h2>Catálogo</h2>
+      <p>
+        Objetos ceremoniales creados con intención para acompañar prácticas espirituales,
+        rituales y trabajos energéticos.
+      </p>
     </section>
 
-    <section class="section" id="productos">
+    <!-- PRODUCTOS -->
+    <section class="section">
       <div class="grid">
 
         <article class="card">
-          <img src="assets/carracas-set.jpg" alt="Carracas chamanicas">
+          <img src="assets/carracas-set.jpg" alt="Carracas chamánicas">
           <div class="pad">
-            <h3>Carracas chamanicas</h3>
-            <p>Instrumentos rituales para marcar ritmo, dirección e intención. Cada pieza es única en sonido y terminación.</p>
+            <h3>Carracas chamánicas</h3>
+            <p>Instrumentos rituales para marcar ritmo, intención y dirección energética.</p>
             <div class="meta">
               <span class="price">$50.000 ARS</span>
-              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20consultar%20por%20Carracas%20chamanicas." target="_blank">Pedir por WhatsApp</a>
+              <a class="btn" href="carracas.html">Ver variantes</a>
             </div>
           </div>
         </article>
 
         <article class="card">
-          <img src="assets/plumeros.jpg" alt="Plumeros para defumacion">
+          <img src="assets/plumeros.jpg" alt="Plumeros de defumación">
           <div class="pad">
-            <h3>Plumeros para defumacion</h3>
-            <p>Plumeros artesanales para sahumar, limpiar espacios y acompañar prácticas ceremoniales.</p>
+            <h3>Plumeros de defumación</h3>
+            <p>Para sahumar, limpiar espacios y acompañar ceremonias.</p>
             <div class="meta">
               <span class="price">$30.000 ARS</span>
-              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20consultar%20por%20Plumeros%20para%20defumacion." target="_blank">Pedir por WhatsApp</a>
+              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20consultar%20por%20Plumeros%20de%20defumación." target="_blank">Pedir</a>
             </div>
           </div>
         </article>
@@ -73,10 +92,10 @@
           <img src="assets/velas-arcanas.jpg" alt="Velas arcanas">
           <div class="pad">
             <h3>Velas Arcanas</h3>
-            <p>Velas vinculadas a los 22 Arcanos Mayores. Podés elegir el arcano con el que querés trabajar.</p>
+            <p>Velas vinculadas a los 22 Arcanos Mayores. Podés elegir el arcano.</p>
             <div class="meta">
               <span class="price">$20.000 ARS</span>
-              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20una%20Vela%20Arcana.%20Quiero%20elegir%20el%20arcano." target="_blank">Pedir por WhatsApp</a>
+              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20una%20Vela%20Arcana." target="_blank">Pedir</a>
             </div>
           </div>
         </article>
@@ -85,10 +104,10 @@
           <img src="assets/aguayos.jpg" alt="Aguayos rituales">
           <div class="pad">
             <h3>Aguayos rituales</h3>
-            <p>Elementos rituales para delimitar el espacio sagrado en prácticas de chamanismo y ceremonias.</p>
+            <p>Delimitan el espacio sagrado en prácticas chamánicas.</p>
             <div class="meta">
               <span class="price">$30.000 ARS</span>
-              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20consultar%20por%20Aguayos%20rituales." target="_blank">Pedir por WhatsApp</a>
+              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20consultar%20por%20Aguayos." target="_blank">Pedir</a>
             </div>
           </div>
         </article>
@@ -97,34 +116,10 @@
           <img src="assets/agua-florida.jpg" alt="Agua Florida">
           <div class="pad">
             <h3>Agua Florida</h3>
-            <p>Esencia artesanal para limpieza, protección y armonización. Ideal para uso personal y ritual.</p>
+            <p>Esencia artesanal para limpieza, protección y armonización.</p>
             <div class="meta">
               <span class="price">$15.000 ARS</span>
-              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20consultar%20por%20Agua%20Florida." target="_blank">Pedir por WhatsApp</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/carracas-moradas.jpg" alt="Carracas moradas">
-          <div class="pad">
-            <h3>Carracas (variante morada)</h3>
-            <p>Detalle de terminación y color. Consultá cuál está disponible en este momento.</p>
-            <div class="meta">
-              <span class="price">$50.000 ARS</span>
-              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20me%20interesan%20las%20carracas%20moradas.%20¿Hay%20disponibles?" target="_blank">Pedir por WhatsApp</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card">
-          <img src="assets/carracas-verdes.jpg" alt="Carracas verdes">
-          <div class="pad">
-            <h3>Carracas (variante verde)</h3>
-            <p>Otra variante. Si querés un color en particular, pedilo y te dice qué hay listo para envío.</p>
-            <div class="meta">
-              <span class="price">$50.000 ARS</span>
-              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20me%20interesan%20las%20carracas%20verdes.%20¿Hay%20disponibles?" target="_blank">Pedir por WhatsApp</a>
+              <a class="btn" href="https://wa.me/5491130058780?text=Hola%20Yuri,%20quiero%20consultar%20por%20Agua%20Florida." target="_blank">Pedir</a>
             </div>
           </div>
         </article>
@@ -132,13 +127,18 @@
       </div>
     </section>
 
+    <!-- ENVIOS -->
     <section class="section">
       <h2>Envíos</h2>
-      <p><strong>Envíos a todo el país por Correo Argentino.</strong> También se puede coordinar otra opción según destino y urgencia. Consultá por WhatsApp con tu localidad y código postal.</p>
+      <p>
+        Envíos a todo el país por <strong>Correo Argentino</strong>.
+        Consultá costo según localidad.
+      </p>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
-      © Artesanando – Proyecto artesanal de Yuri Sumak
+      © Artesanando — Creado y consagrado por Yuri Sumak
     </footer>
 
   </div>
