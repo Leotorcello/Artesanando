@@ -1,163 +1,184 @@
-/* ================================
+/* =========================
    RESET BÁSICO
-================================ */
+========================= */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
-  font-family: "Inter", sans-serif;
-  color: #1b1218;
-  background-image: url("assets/terracotta-bg.jpg");
+  font-family: "Cormorant Garamond", serif;
+  color: #2a1a1f;
+  background-image: url("https://perledecoton.com/cdn/shop/articles/couleur_terracotta_5470aff5-f23e-4899-8de7-0600567824b8.jpg?v=1758023179&width=1920");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  line-height: 1.6;
 }
 
-/* ================================
+/* =========================
    CONTENEDOR GENERAL
-================================ */
+========================= */
 .container {
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 40px auto;
-  padding: 32px;
-  background: rgba(255, 245, 235, 0.88);
+  padding: 24px;
+  background: rgba(245, 235, 225, 0.88);
   border-radius: 18px;
-  backdrop-filter: blur(2px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
 }
 
-/* ================================
+/* =========================
    HEADER / HERO
-================================ */
-header {
+========================= */
+.header {
   text-align: center;
-  margin-bottom: 48px;
+  padding: 20px 20px 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(
+    135deg,
+    rgba(180,110,70,0.9),
+    rgba(140,80,60,0.9)
+  );
+  border-radius: 16px;
+  color: #f5efe9;
 }
 
-.logo {
-  max-width: 120px;   /* CLAVE: logo chico */
-  margin: 0 auto 16px;
-  display: block;
+.header img {
+  max-width: 140px;   /* LOGO CONTROLADO */
+  height: auto;
+  margin-bottom: 14px;
 }
 
-header h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
+.header h1 {
+  font-size: 26px;
   font-weight: 600;
-  color: #2c1a22;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
-header p {
+.header p {
   font-size: 16px;
-  color: #4a2f2f;
-  margin-bottom: 20px;
+  opacity: 0.95;
 }
 
-/* etiquetas rituales */
+/* badges */
 .badges {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  margin-top: 14px;
 }
 
 .badge {
-  background: rgba(107, 74, 45, 0.15);
-  color: #4a2f2f;
+  display: inline-block;
+  margin: 6px;
   padding: 6px 14px;
-  border-radius: 999px;
   font-size: 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.25);
+  color: #fff;
+  backdrop-filter: blur(4px);
 }
 
-/* ================================
+/* =========================
    GRID DE PRODUCTOS
-================================ */
+========================= */
 .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
 }
 
-/* ================================
+/* =========================
    CARD DE PRODUCTO
-================================ */
+========================= */
 .card {
-  background: rgba(255, 255, 255, 0.94);
-  border-radius: 16px;
+  background: #fdfaf7;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   display: flex;
   flex-direction: column;
 }
 
 .card img {
   width: 100%;
-  height: 200px;
+  height: 180px;
   object-fit: cover;
 }
 
-/* contenido */
+/* CONTENIDO */
 .card-content {
-  padding: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  padding: 16px;
+  flex: 1;
 }
 
-/* título */
+/* =========================
+   TÍTULOS (ACÁ ESTABA EL PROBLEMA)
+========================= */
 .card h3 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  color: #1b1218;
-}
-
-/* descripción */
-.card p {
-  font-size: 14px;
-  color: #4a2f2f;
-}
-
-/* precio */
-.price {
-  font-weight: 600;
-  color: #3f6b4f;
-  margin-top: 6px;
-}
-
-/* ================================
-   BOTONES
-================================ */
-.button {
-  margin-top: auto;
-  align-self: flex-start;
-  background: #3f6b4f;
-  color: #fff;
+  color: #1f1216;       /* CONTRASTE REAL */
+  margin-bottom: 6px;
+  line-height: 1.25;
   text-decoration: none;
-  padding: 8px 18px;
+}
+
+.card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* =========================
+   TEXTO
+========================= */
+.card p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  color: #3a252a;
+}
+
+/* =========================
+   PRECIO + BOTÓN
+========================= */
+.card-footer {
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #6b3f2b;
+  background: #efe1d6;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.button {
+  text-decoration: none;
+  background: #2f5d50;
+  color: #fff;
+  padding: 6px 14px;
   border-radius: 999px;
   font-size: 14px;
   transition: background 0.2s ease;
 }
 
 .button:hover {
-  background: #2f533c;
+  background: #24473e;
 }
 
-/* ================================
+/* =========================
    FOOTER
-================================ */
-footer {
+========================= */
+.footer {
+  margin-top: 40px;
   text-align: center;
-  margin-top: 60px;
   font-size: 14px;
-  color: #4a2f2f;
-}
-
-footer strong {
-  font-weight: 600;
+  color: #3a252a;
+  opacity: 0.85;
 }
