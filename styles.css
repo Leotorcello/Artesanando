@@ -1,287 +1,163 @@
-:root{
-  --bg: #f3eadc;
-  --paper: #fbf6ee;
-  --ink: #1a1713;
-
-  --terracotta: #b45a3c;
-  --ochre: #c79a3b;
-  --forest: #2f4a3a;
-
-  --muted: rgba(26,23,19,.72);
-  --line: rgba(26,23,19,.12);
-
-  --radius: 18px;
-  --shadow: 0 18px 50px rgba(0,0,0,.12);
+/* ================================
+   RESET BÁSICO
+================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-*{ box-sizing:border-box; }
-
-body{
-  margin:0;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: #f4efe8;
-
-  background-image: url("https://perledecoton.com/cdn/shop/articles/couleur_terracotta_5470aff5-f23e-4899-8de7-0600567824b8.jpg?v=1758023179&width=1920");
-  background-repeat: repeat;
+body {
+  font-family: "Inter", sans-serif;
+  color: #1b1218;
+  background-image: url("assets/terracotta-bg.jpg");
   background-size: cover;
-  background-position: center;
   background-attachment: fixed;
-}
-
-
-.container{
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 24px;
-}
-
-a{ color: inherit; }
-
-.header{
-  position: relative;
-  padding: 28px 18px;
-  margin: 18px 0 22px;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  border: 1px solid rgba(255,255,255,.35);
-
-  /* “Pared ocre/terracota” sin archivo */
-  background:
-    radial-gradient(900px 400px at 30% 20%, rgba(255,255,255,.25), transparent 55%),
-    radial-gradient(700px 350px at 80% 60%, rgba(0,0,0,.12), transparent 60%),
-    linear-gradient(135deg, rgba(180,90,60,.92) 0%, rgba(199,154,59,.92) 55%, rgba(120,70,45,.92) 100%);
-}
-
-.header::after{
-  /* grano sutil tipo “estudio” */
-  content:"";
-  position:absolute; inset:0;
-  background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,.03) 0 1px, rgba(0,0,0,.03) 1px 2px);
-  mix-blend-mode: overlay;
-  opacity:.25;
-  pointer-events:none;
-}
-
-.brand{
-  position: relative;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 16px;
-  align-items: center;
-}
-
-{
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
-  border-radius: 20px;
-  background: rgba(255,255,255,.75);
-  padding: 10px;
-  box-shadow: 0 14px 40px rgba(0,0,0,.18);
-}
-
-.brand h1{
-  margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 56px;
-  line-height: 1;
-  letter-spacing: .2px;
-  color: #fff;
-  text-shadow: 0 10px 30px rgba(0,0,0,.28);
-}
-
-.brand p{
-  margin: 6px 0 0;
-  color: rgba(255,255,255,.92);
-  max-width: 62ch;
-  font-weight: 400;
-}
-
-.badges{
-  margin-top: 12px;
-  display:flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255,255,255,.18);
-  border: 1px solid rgba(255,255,255,.25);
-  color: rgba(255,255,255,.95);
-  backdrop-filter: blur(6px);
-  font-size: 13px;
-}
-
-.section{
-  margin: 22px 0;
-  padding: 22px;
-  border-radius: 24px;
-  background: rgba(251,246,238,.75);
-  border: 1px solid var(--line);
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-}
-
-.section h2{
-  margin: 0 0 14px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 34px;
-}
-
-.section p{
-  margin: 0;
-  color: var(--muted);
+  background-position: center;
   line-height: 1.6;
 }
 
-/* Grid catálogo */
-.grid{
-  display:grid;
-  gap: 16px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+/* ================================
+   CONTENEDOR GENERAL
+================================ */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 32px;
+  background: rgba(255, 245, 235, 0.88);
+  border-radius: 18px;
+  backdrop-filter: blur(2px);
 }
 
-.card{
-  background: rgba(255,255,255,.78);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: 0 12px 28px rgba(0,0,0,.08);
-  display:flex;
-  flex-direction: column;
+/* ================================
+   HEADER / HERO
+================================ */
+header {
+  text-align: center;
+  margin-bottom: 48px;
 }
 
-.card img{
-  width:100%;
-  height: 200px;         /* clave: no gigantes */
-  object-fit: cover;
-  display:block;
+.logo {
+  max-width: 120px;   /* CLAVE: logo chico */
+  margin: 0 auto 16px;
+  display: block;
 }
 
-.card .pad{
-  padding: 14px 14px 16px;
-  display:flex;
-  flex-direction: column;
-  gap: 10px;
+header h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #2c1a22;
+  margin-bottom: 12px;
 }
 
-.card h3{
-  margin:0;
+header p {
   font-size: 16px;
-  letter-spacing:.2px;
+  color: #4a2f2f;
+  margin-bottom: 20px;
 }
 
-.card p{
-  margin:0;
-  color: var(--muted);
-  line-height: 1.45;
+/* etiquetas rituales */
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: rgba(107, 74, 45, 0.15);
+  color: #4a2f2f;
+  padding: 6px 14px;
+  border-radius: 999px;
   font-size: 14px;
 }
 
-.meta{
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 4px;
+/* ================================
+   GRID DE PRODUCTOS
+================================ */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
 }
 
-.price{
-  font-weight: 700;
-  color: rgba(26,23,19,.9);
-  background: rgba(199,154,59,.18);
-  border: 1px solid rgba(199,154,59,.30);
-  padding: 6px 10px;
-  border-radius: 999px;
-  font-size: 13px;
-  white-space: nowrap;
-}
-
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding: 10px 14px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 13px;
-
-  background: linear-gradient(135deg, rgba(47,74,58,1) 0%, rgba(22,45,34,1) 100%);
-  color:#fff;
-  border: 1px solid rgba(255,255,255,.18);
-  box-shadow: 0 12px 28px rgba(0,0,
-                               /* LOGO CENTRADO CEREMONIAL */
-
-.brand-centered{
-  position: relative;
-  z-index: 1;
-  text-align: center;
+/* ================================
+   CARD DE PRODUCTO
+================================ */
+.card {
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 14px;
 }
 
-.logo-centered{
-  width: 110px;          /* tamaño correcto ceremonial */
-  max-width: 50vw;
-  height: auto;
-  margin-bottom: 6px;
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,.25));
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-
-.tagline{
-  margin: 0;
-  font-size: 16px;
-  color: rgba(255,255,255,.95);
-  letter-spacing: .4px;
+/* contenido */
+.card-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.badges.centered{
-  justify-content: center;
-}
-/* FIX DEFINITIVO: tamaño del logo */
-.logo-centered{
-  width: 90px !important;
-  max-width: 90px !important;
-  height: auto !important;
-  display: block !important;
-  margin: 0 auto 6px !important;
-  filter: drop-shadow(0 8px 18px rgba(0,0,0,.25)) !important;
-}
-/* --- FIX: títulos de productos (visibles y elegantes) --- */
-.card h3{
+/* título */
+.card h3 {
   font-family: "Cormorant Garamond", serif;
   font-size: 22px;
-  line-height: 1.15;
-  margin: 0 0 8px;
   font-weight: 600;
-  color: #1c141a;              /* oscuro real */
-  text-decoration: none !important;
+  color: #1b1218;
 }
 
-/* si por alguna razón el título quedó dentro de un <a> */
-.card h3 a{
-  color: inherit !important;
-  text-decoration: none !important;
+/* descripción */
+.card p {
+  font-size: 14px;
+  color: #4a2f2f;
 }
 
-/* textos del card un toque más legibles */
-.card p{
-  color: rgba(28,20,26,.82);
+/* precio */
+.price {
+  font-weight: 600;
+  color: #3f6b4f;
+  margin-top: 6px;
 }
 
-/* por si algún estilo global está pintando links en azul */
-.card a{
-  color: inherit;
+/* ================================
+   BOTONES
+================================ */
+.button {
+  margin-top: auto;
+  align-self: flex-start;
+  background: #3f6b4f;
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 14px;
+  transition: background 0.2s ease;
 }
 
+.button:hover {
+  background: #2f533c;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 14px;
+  color: #4a2f2f;
+}
+
+footer strong {
+  font-weight: 600;
+}
