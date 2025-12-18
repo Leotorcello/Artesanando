@@ -231,11 +231,12 @@ a{ color: inherit; }
 }
 
 .logo-centered{
-  width: 260px;
-  max-width: 80vw;
+  width: 160px;          /* tamaño correcto */
+  max-width: 60vw;
   height: auto;
-  filter: drop-shadow(0 18px 40px rgba(0,0,0,.35));
+  filter: drop-shadow(0 10px 24px rgba(0,0,0,.28));
 }
+
 
 .tagline{
   margin: 0;
