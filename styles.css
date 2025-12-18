@@ -6,7 +6,7 @@
 body {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   color: #2a1a1f;
-  /* Fondo terracota con textura */
+  /* Fondo general terracota */
   background: url("https://perledecoton.com/cdn/shop/articles/couleur_terracotta_5470aff5-f23e-4899-8de7-0600567824b8.jpg?v=1758023179&width=1920");
   background-size: cover;
   background-attachment: fixed;
@@ -24,13 +24,13 @@ body {
 }
 
 /* =========================
-   HEADER (Placa clara para logo)
+   HEADER
 ========================= */
 .header {
   text-align: center;
   padding: 40px 20px;
   border-radius: 24px;
-  background: rgba(245, 236, 220, 0.95); /* Color crema sagrado */
+  background: rgba(245, 236, 220, 0.95);
   box-shadow: 0 15px 35px rgba(0,0,0,0.2);
   margin-top: 20px;
   border: 1px solid rgba(255,255,255,0.3);
@@ -65,14 +65,15 @@ body {
 }
 
 /* =========================
-   SECCIONES
+   SECCIONES GENERALES
 ========================= */
 .section {
   margin: 30px 0;
-  padding: 30px;
+  padding: 40px 30px;
   border-radius: 24px;
   background: rgba(245, 236, 220, 0.9);
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden; /* Para que la foto de fondo no se salga de las esquinas redondeadas */
 }
 
 .section h2 {
@@ -81,6 +82,12 @@ body {
   color: #2a1a1f;
   margin-bottom: 15px;
   text-align: center;
+}
+
+.section p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 /* =========================
@@ -93,7 +100,6 @@ body {
   margin-top: 20px;
 }
 
-/* CARDS (Tarjetas de producto) */
 .card {
   background: white;
   border-radius: 20px;
@@ -105,7 +111,7 @@ body {
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Pequeño salto al pasar el mouse */
+  transform: translateY(-5px);
 }
 
 .card img {
@@ -126,15 +132,16 @@ body {
   font-size: 24px;
   margin-bottom: 10px;
   color: #1a0f13;
+  text-align: left;
 }
 
 .card p {
   font-size: 15px;
   color: #555;
   margin-bottom: 20px;
+  text-align: left;
 }
 
-/* PRECIO Y BOTONES */
 .meta {
   margin-top: auto;
   display: flex;
@@ -148,11 +155,12 @@ body {
   background: #f0f4f0;
   padding: 5px 12px;
   border-radius: 10px;
+  font-size: 14px;
 }
 
 .btn {
   text-decoration: none;
-  background: #2e4b2f; /* Verde ritual */
+  background: #2e4b2f;
   color: white;
   padding: 10px 20px;
   border-radius: 12px;
@@ -161,12 +169,8 @@ body {
   transition: background 0.3s;
 }
 
-.btn:hover {
-  background: #1e3320;
-}
-
 /* =========================
-   FOOTER Y OTROS
+   FOOTER
 ========================= */
 .footer {
   text-align: center;
@@ -176,55 +180,12 @@ body {
   text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
-/* Responsive para celulares */
+/* Responsive */
 @media (max-width: 600px) {
   .grid {
     grid-template-columns: 1fr;
   }
   .section h2 {
-     /* Estilos para la sección Sobre Mí con foto */
-.sobre-mi-container {
-  background-color: rgba(245, 236, 220, 0.95) !important;
-  padding: 40px !important;
-}
-
-.sobre-mi-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap; /* Para que en el celular la foto quede arriba del texto */
-  text-align: left;
-}
-
-.foto-perfil {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%; /* Esto la hace circular */
-  object-fit: cover;
-  border: 4px solid #2e4b2f; /* Un borde verde ritual */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-
-.sobre-mi-texto {
-  max-width: 500px;
-}
-
-.sobre-mi-texto h2 {
-  text-align: left !important;
-  margin-bottom: 10px;
-}
-
-/* Ajuste para celulares */
-@media (max-width: 600px) {
-  .sobre-mi-flex {
-    flex-direction: column;
-    text-align: center;
-  }
-  .sobre-mi-texto h2 {
-    text-align: center !important;
-  }
-}
     font-size: 30px;
   }
 }
