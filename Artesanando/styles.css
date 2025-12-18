@@ -1,0 +1,56 @@
+body{
+  margin:0;
+  font-family:Inter, sans-serif;
+  background:#f2ebdd;
+  color:#141210;
+}
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:24px;
+}
+.topbar{
+  background:#f2ebdd;
+  border-bottom:1px solid #ddd;
+}
+.logo{
+  height:60px;
+}
+.hero{
+  text-align:center;
+  padding:40px 0;
+}
+h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:56px;
+  margin-bottom:10px;
+}
+.subtitle{
+  color:#555;
+}
+.micro{
+  font-size:14px;
+  color:#666;
+}
+.product{
+  border:1px solid #ddd;
+  padding:20px;
+  margin-bottom:20px;
+  border-radius:12px;
+  background:#fff;
+}
+.btn{
+  display:inline-block;
+  margin-top:10px;
+  background:#2f4a3a;
+  color:#fff;
+  padding:10px 16px;
+  text-decoration:none;
+  border-radius:20px;
+}
+.footer{
+  text-align:center;
+  font-size:14px;
+  color:#666;
+  margin-top:40px;
+}
