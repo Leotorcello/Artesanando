@@ -163,3 +163,20 @@ body {
   font-size: 14px;
   color: #f3ede6;
 }
+/* =========================
+   FORZAR CATÁLOGO EN GRILLA
+   (ANULA BANDAS)
+========================= */
+
+.products {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)) !important;
+  gap: 24px !important;
+  align-items: stretch;
+}
+
+.products > * {
+  display: block !important;
+  width: 100% !important;
+}
+
